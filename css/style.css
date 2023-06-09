@@ -8,16 +8,39 @@
 
 /* Genereics */
 
-body{
+main{
     font-family: sans-serif;
+    background-image: url(https://static.vecteezy.com/ti/foto-gratuito/t1/21836727-ai-generato-cervello-infortunio-causando-danno-per-il-cervello-fazzoletto-di-carta-astratto-sfondo-foto.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 input{
-    width: 100px;
+    width: 54px;
+    border-radius: 20px;
+    border: none;
+    padding: 10px;
+    margin: 0 20px
+}
+
+button{
+    padding: 14px;
+    border-radius: 30px;
+    border: 2px solid violet;
+    background-color: #1AE8EA;
 }
 
 div{
     margin: 40px 0;
+}
+
+h1{
+    color: red;
 }
 
 p{
@@ -25,17 +48,38 @@ p{
     margin: 5px 0;
 }
 
+#bottom-element span{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    padding: 16px;
+}
+
 /*main content*/
 
 .container{
-    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.4);
     width: 600px;
     text-align: center;
+    padding: 20px;
+    border-radius: 30px;
+    border: 3px solid violet;
+    box-shadow: 0 0 30px red;
 }
 
 #bottom-element{
     display: flex;
     justify-content: space-between;
+}
+
+#countdown{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgb(247, 11, 11);
+    padding: 16px;
+    margin: 0 auto;
 }
 
 /*Utility*/
