@@ -67,17 +67,29 @@ thirdNumber.innerText = testnumbers[2];
 fourthNumber.innerText = testnumbers[3];
 fifthNumber.innerText = testnumbers[4];
 
-//creo un countdown
+//creo un countdown e lo stampo in pagina
 let countdown = 30;
-
 countdownElement.innerText = countdown
+
+//aggiungo la classe d-none
+topElement.classList.add('d-none');
 
 const countdownShift = setInterval( function () {
 
     if(countdown === 0){
         clearInterval(countdownShift);
+        topElement.classList.remove('d-none');
+        middleElement.classList.add('d-none');
+        bottomElement.classList.add('d-none');
+        firstNumber.classList.add('d-none');
+        secondNumber.classList.add('d-none');
+        thirdNumber.classList.add('d-none');
+        fourthNumber.classList.add('d-none');
+        fifthNumber.classList.add('d-none');
     }else{
         countdownElement.innerText = --countdown;
     }
 } ,1000);
+
+
 
