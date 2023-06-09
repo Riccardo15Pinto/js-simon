@@ -34,8 +34,6 @@ const fifthNumber = document.getElementById('fifth-number');
 
 const   responseElementNumber = document.getElementById('response-number');
 
-const infoElement = document.getElementById('info');
-
 const indexElement = document.getElementById('index');
 
 //creo un funzione che generi un array con numeri random da 1 a 99
@@ -68,7 +66,6 @@ countdownElement.innerText = countdown
 
 //aggiungo la classe d-none
 topElement.classList.add('d-none');
-infoElement.classList.add('d-none');
 
 //imposto l'intervallo
 const countdownShift = setInterval( function () {
@@ -79,7 +76,6 @@ const countdownShift = setInterval( function () {
         //rimuovo la classe d-none
         topElement.classList.remove('d-none');
         responseElement.classList.add('d-none');
-        infoElement.classList.remove('d-none');
         //applico la classe d-none
         middleElement.classList.add('d-none');
         firstNumber.classList.add('d-none');
