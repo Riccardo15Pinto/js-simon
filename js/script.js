@@ -66,3 +66,18 @@ secondNumber.innerText = testnumbers[1];
 thirdNumber.innerText = testnumbers[2];
 fourthNumber.innerText = testnumbers[3];
 fifthNumber.innerText = testnumbers[4];
+
+//creo un countdown
+let countdown = 30;
+
+countdownElement.innerText = countdown
+
+const countdownShift = setInterval( function () {
+
+    if(countdown === 0){
+        clearInterval(countdownShift);
+    }else{
+        countdownElement.innerText = --countdown;
+    }
+} ,1000);
+
