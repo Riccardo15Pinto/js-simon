@@ -7,3 +7,26 @@
 }
 
 /* Genereics */
+
+.container{
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
+
+input{
+    width: 100px;
+}
+
+div{
+    margin: 40px 0;
+}
+
+#bottom-element{
+    display: flex;
+    justify-content: space-between;
+}
+
+.d-none{
+    display: none;
+}
