@@ -21,19 +21,24 @@ main{
 }
 
 input{
-    width: 54px;
+    width: 85px;
     border-radius: 20px;
     border: none;
-    padding: 10px;
-    margin: 0 20px
+    padding: 0 10px;
+    margin: 0 20px;
+    height: 50px;
+    font-size: 20px;
 }
 
 button{
-    padding: 14px;
+    padding: 20px;
     border-radius: 30px;
     border: 2px solid violet;
     background-color: #1AE8EA;
+    font-size: 20px;
+    font-weight: bold;
 }
+
 
 div{
     margin: 40px 0;
@@ -44,8 +49,9 @@ h1{
 }
 
 p{
-    font-size: 19px;
+    font-size: 20px;
     margin: 5px 0;
+    font-weight: bold;
 }
 
 #bottom-element span{
@@ -60,7 +66,7 @@ p{
 
 .container{
     background-color: rgba(0, 0, 0, 0.4);
-    width: 600px;
+    width: 735px;
     text-align: center;
     padding: 20px;
     border-radius: 30px;
