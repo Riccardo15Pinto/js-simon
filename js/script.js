@@ -34,6 +34,8 @@ const fifthNumber = document.getElementById('fifth-number');
 
 const   responseElementNumber = document.getElementById('response-number');
 
+const infoElement = document.getElementById('info');
+
 //creo un funzione che generi un array con numeri random da 1 a 99
 function getRandomArray(numberofArray , maxNumber){
     let Numbers = [];
@@ -59,11 +61,12 @@ fourthNumber.innerText = testnumbers[3];
 fifthNumber.innerText = testnumbers[4];
 
 //creo un countdown e lo stampo in pagina
-let countdown = 1;
+let countdown = 30;
 countdownElement.innerText = countdown
 
 //aggiungo la classe d-none
 topElement.classList.add('d-none');
+infoElement.classList.add('d-none');
 
 //imposto l'intervallo
 const countdownShift = setInterval( function () {
@@ -74,6 +77,7 @@ const countdownShift = setInterval( function () {
         //rimuovo la classe d-none
         topElement.classList.remove('d-none');
         responseElement.classList.add('d-none');
+        infoElement.classList.remove('d-none');
         //applico la classe d-none
         middleElement.classList.add('d-none');
         firstNumber.classList.add('d-none');
@@ -110,7 +114,7 @@ buttonelement.addEventListener('click' , function() {
     //controllo entrambi gli array
     for(let i = 0; i < testnumbers.length && i < UserNumbers.length; i++){
         if(testnumbers[i] === UserNumbers[i]){
-            responseElementNumber.innerText += ' ' + testnumbers[i] + ' ';
+            responseElementNumber.innerText += ' ' + ' ' + testnumbers[i] + ' ' + ' ';
         }
     }
     
