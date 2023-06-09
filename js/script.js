@@ -22,8 +22,6 @@ const middleElement = document.getElementById('middle-element');
 
 const countdownElement = document.getElementById('countdown');
 
-const bottomElement = document.getElementById('bottom-element');
-
 const firstNumber = document.getElementById('first-number');
 
 const secondNumber = document.getElementById('second-number');
@@ -34,14 +32,7 @@ const fourthNumber = document.getElementById('fourth-number');
 
 const fifthNumber = document.getElementById('fifth-number');
 
-
-// recupero i valori degli elementi
-
-const firstvalue = parseInt(firstinputelement.value);
-const secondvalue = parseInt(secondinputelement.value);
-const thirdvalue = parseInt(thirdinputelement.value);
-const fourthtvalue = parseInt(fourthinputelement.value);
-const fifthvalue = parseInt(fifthinputelement.value);
+const   responseElementNumber = document.getElementById('response-number');
 
 //creo un funzione che generi un array con numeri random da 1 a 99
 function getRandomArray(numberofArray , maxNumber){
@@ -68,28 +59,60 @@ fourthNumber.innerText = testnumbers[3];
 fifthNumber.innerText = testnumbers[4];
 
 //creo un countdown e lo stampo in pagina
-let countdown = 30;
+let countdown = 1;
 countdownElement.innerText = countdown
 
 //aggiungo la classe d-none
 topElement.classList.add('d-none');
 
+//imposto l'intervallo
 const countdownShift = setInterval( function () {
-
+    //se il countdown arriva a 0 
     if(countdown === 0){
+        //interrompo il countdown
         clearInterval(countdownShift);
+        //rimuovo la classe d-none
         topElement.classList.remove('d-none');
+        responseElement.classList.add('d-none');
+        //applico la classe d-none
         middleElement.classList.add('d-none');
-        bottomElement.classList.add('d-none');
         firstNumber.classList.add('d-none');
         secondNumber.classList.add('d-none');
         thirdNumber.classList.add('d-none');
         fourthNumber.classList.add('d-none');
         fifthNumber.classList.add('d-none');
     }else{
+        //il countdown continua
         countdownElement.innerText = --countdown;
     }
 } ,1000);
 
+//creo un array vuoto
+const UserNumbers = [];
 
+//metto in ascolto il bottone
+buttonelement.addEventListener('click' , function() {
+   
+    // rimuovo la classe d-none
+    responseElement.classList.remove('d-none');
+
+    // recupero i valori degli elementi
+    const firstvalue = parseInt(firstinputelement.value);
+    const secondvalue = parseInt(secondinputelement.value);
+    const thirdvalue = parseInt(thirdinputelement.value);
+    const fourthvalue = parseInt(fourthinputelement.value);
+    const fifthvalue = parseInt(fifthinputelement.value);
+    
+    //li inserisco in un secondo array
+    UserNumbers.push(firstvalue, secondvalue, thirdvalue, fourthvalue, fifthvalue);
+    console.table(UserNumbers);
+
+    //controllo entrambi gli array
+    for(let i = 0; i < testnumbers.length && i < UserNumbers.length; i++){
+        if(testnumbers[i] === UserNumbers[i]){
+            responseElementNumber.innerText += ' ' + testnumbers[i] + ' ';
+        }
+    }
+    
+});
 
