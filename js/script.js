@@ -63,7 +63,7 @@ fourthNumber.innerText = testnumbers[3];
 fifthNumber.innerText = testnumbers[4];
 
 //creo un countdown e lo stampo in pagina
-let countdown = 1;
+let countdown = 30;
 countdownElement.innerText = countdown
 
 //aggiungo la classe d-none
