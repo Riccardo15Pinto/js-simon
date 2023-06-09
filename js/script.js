@@ -42,3 +42,27 @@ const secondvalue = parseInt(secondinputelement.value);
 const thirdvalue = parseInt(thirdinputelement.value);
 const fourthtvalue = parseInt(fourthinputelement.value);
 const fifthvalue = parseInt(fifthinputelement.value);
+
+//creo un funzione che generi un array con numeri random da 1 a 99
+function getRandomArray(numberofArray , maxNumber){
+    let Numbers = [];
+    while(Numbers.length < numberofArray){
+        let randomNumber;
+        do{
+            randomNumber = Math.floor(Math.random() * maxNumber) + 1;
+        }while(Numbers.includes(randomNumber))
+        Numbers.push(randomNumber);
+    }
+    return Numbers;
+}
+
+//richiamo la funzione e controllo
+const testnumbers = getRandomArray(5, 99);
+console.table(testnumbers);
+
+//stampo il contenuto dell'array in pagina
+firstNumber.innerText = testnumbers[0];
+secondNumber.innerText = testnumbers[1];
+thirdNumber.innerText = testnumbers[2];
+fourthNumber.innerText = testnumbers[3];
+fifthNumber.innerText = testnumbers[4];
