@@ -8,10 +8,8 @@
 
 /* Genereics */
 
-.container{
-    margin: 0 auto;
-    width: 600px;
-    text-align: center;
+body{
+    font-family: sans-serif;
 }
 
 input{
@@ -22,10 +20,25 @@ div{
     margin: 40px 0;
 }
 
+p{
+    font-size: 19px;
+    margin: 5px 0;
+}
+
+/*main content*/
+
+.container{
+    margin: 0 auto;
+    width: 600px;
+    text-align: center;
+}
+
 #bottom-element{
     display: flex;
     justify-content: space-between;
 }
+
+/*Utility*/
 
 .d-none{
     display: none;
